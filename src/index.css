@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@media (prefers-color-scheme: light) {
+  :root {
+      --body-bg: #F9F9F9;
+      --body-color: #343434;
+      --menu-color: #ADC2A9;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+      --body-bg: #343434;
+      --body-color: #F9F9F9;
+      --menu-color: #697767;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #F9F9F9;
+  scroll-behavior: smooth;
+  background: var(--body-bg);
+  color: var(--body-color);
+}
+
+h1 {
+  padding-top: 110px;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 300;
+  font-size: 300%;
+  color: #FEE3EC;
+}
+
+/* font-family: 'Bai Jamjuree', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+.menu {
+  width: 29%;
+  height: 100vh;
+  float: left;
+  position: fixed;
+  border-radius: 0 30px 30px 0;
+  background: var(--menu-color);
+}
+
+.content {
+  padding-top: 20px;
+  width: 70%;
+  float: right;
+}
+
+.singlePost {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 90%;
+}
+
+.focusOnSinglePost {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 90%;
+}
+
+.title {
+  width: fit-content;
+  height: fit-content;
+  padding-bottom: 15px;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 300;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.title:hover {
+  opacity: 0.7;
+}
+
+.date {
+  width: fit-content;
+  height: fit-content;
+  padding-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.post {
+  text-align: left;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 200;
+  line-height: 30px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.links {
+  padding-top: 20px;
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  text-decoration: none;
+  color: #FEE3EC;
+}
+
+a:hover {
+  -webkit-text-stroke: 1px #FEE3EC;
+}
+
+p {
+  padding: 10px 0;
+}
+
+.footer {
+  color: #F9F9F9;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+}
+
+button {
+  position: absolute;
+  right: 50px;
 }
