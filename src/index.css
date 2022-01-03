@@ -1,19 +1,19 @@
-@media (prefers-color-scheme: light) {
-  :root {
+:root {
       --body-bg: #F9F9F9;
       --body-color: #343434;
       --menu-color: #ADC2A9;
-  }
+      --font-color: #343434;
+      --icon-filter: invert(15%);
 }
 
 /* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
+[data-theme="dark"] {
       --body-bg: #343434;
       --body-color: #F9F9F9;
       --menu-color: #697767;
+      --font-color: #FEE3EC;
+      --icon-filter: invert(85%);
   }
-}
 
 html, body {
   margin: 0;
@@ -30,7 +30,7 @@ h1 {
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 300;
   font-size: 300%;
-  color: #FEE3EC;
+  color: var(--font-color);
 }
 
 /* font-family: 'Bai Jamjuree', sans-serif;
@@ -41,7 +41,7 @@ font-family: 'Montserrat', sans-serif; */
   height: 100vh;
   float: left;
   position: fixed;
-  border-radius: 0 30px 30px 0;
+  border-radius: 0 20px 20px 0;
   background: var(--menu-color);
 }
 
@@ -106,7 +106,7 @@ a {
   font-weight: 200;
   font-size: 22px;
   text-decoration: none;
-  color: #FEE3EC;
+  color: var(--font-color);
 }
 
 a:hover {
@@ -117,8 +117,18 @@ p {
   padding: 10px 0;
 }
 
+.darkModeIcon {
+  width: 11%;
+  cursor: pointer;
+  filter: var(--icon-filter);
+}
+
+.darkModeIcon:hover {
+  filter: invert(100%);
+}
+
 .footer {
-  color: #F9F9F9;
+  color: var(--font-color);
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
